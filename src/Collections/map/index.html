@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>map</title>
+</head>
+<body>
+    <div class="container">打开控制台</div>
+<script type="text/javascript" src="../../../bower_components/underscore/underscore.js"> </script>
+<script>
+
+    (function(){
+
+        _.map([1,2,3,4,5,6,,7,8,],(i) => {
+            console.log(i);
+        })
+        console.log(_.map([1, 2, 3], (num) =>  num * 3));
+
+
+        console.log(
+            _.map(['🍎', '🍊', '🍌', '🌰'], (val,index,obj) => {
+                console.log(val,index,obj);
+                return val + 'array'
+            })
+        );
+
+        console.log("Object");
+        console.log(
+            _.map({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'},(val,key,obj) => {
+                console.log(val,key,obj);
+
+                return val + 'object'
+            })
+        );
+        console.log('callback is null');
+        console.log(
+            _.map({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'})
+        );
+        console.log(
+            _.map({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'},{})
+        );
+        console.log(
+            _.map({'1':{'苹果':'1'},'2':{'橘子':'2'},'3':{'香蕉':'3'},'4':{'栗子':'4'}},{'香蕉':'3'})
+        );
+
+        console.log('########collect#######');
+        _.collect([1,2,3,4,5,6,,7,8,],(i) => {
+            console.log(i);
+        })
+    })()
+
+
+</script>
+</body>
+</html>

@@ -1,1 +1,2 @@
 [each](./each)
+[map](./map)
