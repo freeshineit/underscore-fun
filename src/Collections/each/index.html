@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>each</title>
+</head>
+<body>
+    <div class="container">打开控制台</div>
+<script type="text/javascript" src="../../../bower_components/underscore/underscore.js"> </script>
+<script>
+
+    (function(){
+        console.log('Array');
+        _.each([99, 2, 3], (i) => {
+            console.log(i);
+        });
+
+        _.each(['🍎', '🍊', '🍌', '🌰'], (val,index,obj) => {
+            console.log(val,index,obj);
+        });
+
+        console.log("Object");
+        _.each({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'},(val,key,obj) => {
+            console.log(val,key,obj);
+        })
+
+
+
+        _.forEach(['a','b','c','d'],(i) => {
+            console.log(i);
+        })
+
+
+
+    })()
+
+
+</script>
+</body>
+</html>
