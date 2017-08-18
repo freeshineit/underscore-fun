@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reduce</title>
+</head>
+<body>
+    <div class="container">打开控制台</div>
+<script type="text/javascript" src="../../../bower_components/underscore/underscore.js"> </script>
+<script>
+
+    (function(){
+
+        // 第三个参数没有 memo默认为数组的第一个的值
+        // 循环到第二次时，没有返回值 memo的值为undefined
+        _.reduce([1,2,3,4,5,6,0,7,8,],(meom,num) => {
+            console.log('meom1',meom,'num1: ',num);
+        })
+
+        _.reduce([1,2,3,4,5,6,0,7,8,],(meom,num) => {
+            console.log('meom2',meom,'num2: ',num);
+            return meom + num;
+        })
+
+        _.reduce([1,2,3,4,5,6,0,7,8],(meom,num) => {
+            console.log('meom3: ',meom,'num3: ',num);
+            return meom + num;
+        },100)
+
+        console.log("Object");
+
+        _.reduce({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'},(memo,obj) => {
+            console.log(memo);
+            return obj;
+        })
+
+        console.log('reduce: ',_.reduce({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'},(memo,obj) => {
+            return obj;
+        }))
+
+
+
+        _.inject([1,2,3,4,5,6,0,7,8],(meom,num) => {
+            console.log('inject => meom3: ',meom,'num3: ',num);
+            return meom + num;
+        },100)
+
+        _.foldl([1,2,3,4,5,6,0,7,8],(meom,num) => {
+            console.log('foldl => meom3: ',meom,'num3: ',num);
+            return meom + num;
+        },100)
+    })()
+
+
+</script>
+</body>
+</html>
