@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>matcher</title>
+</head>
+<body>
+    <div class="container">打开控制台</div>
+<script type="text/javascript" src="../../../bower_components/underscore/underscore.js"> </script>
+<script>
+
+    (function(){
+        var ready = _.matcher({selected: true, visible: true});
+
+        console.log(ready({visible: true})); //false
+
+        console.log(_.matcher());
+
+        var ready1= _.matcher({'香蕉':'🍌','栗子':'🌰'})
+        console.log(ready1({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'})); //true
+
+        var ready2= _.matcher({'香':'🍌','栗子':'🌰'})
+        console.log(ready2({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'})); //false
+
+    })()
+
+
+</script>
+</body>
+</html>

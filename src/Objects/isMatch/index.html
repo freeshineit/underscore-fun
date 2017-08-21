@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>isMatch</title>
+</head>
+<body>
+    <div class="container">打开控制台</div>
+<script type="text/javascript" src="../../../bower_components/underscore/underscore.js"> </script>
+<script>
+
+
+(function(){
+
+    console.log(_.isMatch()); // true
+
+    console.log(_.isMatch({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'},{'香蕉':'🍌','栗子':'🌰'})); //true
+
+    console.log(_.isMatch({'苹果':'🍎','橘子':'🍊','香蕉':'🍌','栗子':'🌰'},{'香':'🍌','栗子':'🌰'})); //false
+
+})()
+
+</script>
+</body>
+</html>
