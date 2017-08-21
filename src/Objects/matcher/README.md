@@ -44,5 +44,6 @@ result:
 
 方法分析：
 
-[_.extendOwn({}, attrs)](./Objects/extendOwn)
-[_.isMatch(obj, attrs)](./Object/isMatch)
+[_.extendOwn({}, attrs)](../extendOwn)
+
+[_.isMatch(obj, attrs)](../isMatch)

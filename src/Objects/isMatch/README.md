@@ -43,4 +43,4 @@ result:
 
 获取对象都键值，并组成数组
 
-[_.keys(attrs)](../Objects/keys)
+[_.keys(attrs)](../keys)

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>where</title>
+    <title>reject</title>
 </head>
 <body>
     <div class="container">打开控制台</div>
@@ -12,9 +12,10 @@
 <script>
 
 (function(){
-
-    console.log(_.where([{'苹果':'🍎'},{'橘子':'🍊'},{'栗子':'🌰'}],{'香蕉':'🍌'}));
-    console.log(_.where([{'苹果':'🍎'},{'橘子':'🍊'},{'香蕉':'🍌'},{'香蕉':'🍌','栗子':'🌰'}],{'香蕉':'🍌'}));
+    var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+    console.log(odds);
+    console.log(_.reject([{'苹果':'🍎'},{'橘子':'🍊'},{'栗子':'🌰'}],{'香蕉':'🍌'}));
+    console.log(_.reject([{'苹果':'🍎'},{'橘子':'🍊'},{'香蕉':'🍌'},{'香蕉':'🍌','栗子':'🌰'}],{'香蕉':'🍌'}));
 
 })()
 
