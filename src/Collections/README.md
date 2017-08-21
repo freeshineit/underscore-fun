@@ -7,3 +7,7 @@
 [reduceRight](./reduceRight)
 
 [find](./find)
+
+[filter](./filter)
+
+[where](./where)
